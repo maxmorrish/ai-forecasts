@@ -17,13 +17,19 @@ def score_forecasts(forecasts: list[dict[str, Any]]) -> dict[str, Any]:
         if not resolution or resolution["outcome"] == "ambiguous":
             continue
         outcome = 1 if resolution["outcome"] == "yes" else 0
-        probability = current_probability(forecast)
+        # Headline score uses the probability registered on the creation date. Scoring the latest
+        # update instead would let a forecaster move to near-certainty just before resolution.
+        # The baseline is also recorded on the creation date, so the comparison stays like for like.
+        probability = float(forecast["probability"])
+        final = current_probability(forecast)
         row = {
             "id": forecast["id"],
             "category": forecast["category"],
             "probability": probability,
             "outcome": outcome,
             "brier": brier(probability, outcome),
+            "final_probability": final,
+            "final_brier": brier(final, outcome),
         }
         if forecast.get("baseline"):
             baseline_probability = float(forecast["baseline"]["probability"])
@@ -31,6 +37,7 @@ def score_forecasts(forecasts: list[dict[str, Any]]) -> dict[str, Any]:
         rows.append(row)
 
     overall = sum(row["brier"] for row in rows) / len(rows) if rows else None
+    overall_final = sum(row["final_brier"] for row in rows) / len(rows) if rows else None
     grouped: dict[str, list[float]] = defaultdict(list)
     for row in rows:
         grouped[row["category"]].append(row["brier"])
@@ -66,6 +73,7 @@ def score_forecasts(forecasts: list[dict[str, Any]]) -> dict[str, Any]:
     return {
         "count": len(rows),
         "overall_brier": overall,
+        "overall_final_brier": overall_final,
         "categories": categories,
         "calibration": buckets,
         "baseline": baseline,
@@ -76,7 +84,12 @@ def score_forecasts(forecasts: list[dict[str, Any]]) -> dict[str, Any]:
 def format_score(result: dict[str, Any]) -> str:
     if not result["count"]:
         return "No unambiguous resolved forecasts to score."
-    lines = [f"Overall Brier score: {result['overall_brier']:.4f} ({result['count']} forecasts)", "", "By category:"]
+    lines = [
+        f"Overall Brier score (as first registered): {result['overall_brier']:.4f} ({result['count']} forecasts)",
+        f"After later updates: {result['overall_final_brier']:.4f}",
+        "",
+        "By category:",
+    ]
     for category, item in result["categories"].items():
         lines.append(f"  {category}: {item['brier']:.4f} ({item['count']})")
     lines.extend(["", "Calibration:"])
