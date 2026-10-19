@@ -1,0 +1,20 @@
+# EXAMPLE ONLY — invented data for demonstrating scoring.
+id: EXAMPLE-resolved-no
+created: 2026-02-01
+claim: "EXAMPLE: A fictional chip vendor will announce a consumer accelerator before October."
+resolution_criteria: "Resolves yes if the vendor's official newsroom announces a consumer accelerator available for purchase before 2026-10-01."
+resolve_by: 2026-10-01
+probability: 0.3
+category: hardware
+evidence:
+  - https://example.com/vendor-roadmap
+baseline: null
+updates:
+  - date: 2026-08-01
+    probability: 0.2
+    reason: "The fictional launch event omitted consumer hardware."
+resolution:
+  date: 2026-10-02
+  outcome: no
+  source_url: https://example.com/vendor/newsroom/archive
+

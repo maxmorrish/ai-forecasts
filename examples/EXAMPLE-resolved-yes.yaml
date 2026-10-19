@@ -1,0 +1,24 @@
+# EXAMPLE ONLY — invented data for demonstrating scoring.
+id: EXAMPLE-resolved-yes
+created: 2026-01-05
+claim: "EXAMPLE: A fictional agent framework will publish version 2 before July."
+resolution_criteria: "Resolves yes if the project's official release page lists a stable 2.0.0 release on or before 2026-06-30."
+resolve_by: 2026-06-30
+probability: 0.6
+category: agents
+evidence:
+  - https://example.com/project-roadmap
+baseline:
+  platform: manifold
+  url: https://manifold.markets/example/fictional-framework-v2
+  probability: 0.55
+  recorded: 2026-01-05
+updates:
+  - date: 2026-04-15
+    probability: 0.75
+    reason: "The fictional project published a release candidate."
+resolution:
+  date: 2026-06-20
+  outcome: yes
+  source_url: https://example.com/project/releases/2.0.0
+

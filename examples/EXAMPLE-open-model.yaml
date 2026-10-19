@@ -1,0 +1,14 @@
+# EXAMPLE ONLY — copy and change every field before using in forecasts/.
+id: EXAMPLE-open-model
+created: 2026-10-19
+claim: "EXAMPLE: A fictional open model will top a named public coding benchmark by year end."
+resolution_criteria: "Resolves yes if the benchmark's official public leaderboard lists the fictional model alone at rank one by 2026-12-31."
+resolve_by: 2026-12-31
+probability: 0.35
+category: open-source
+evidence:
+  - https://example.com/leaderboard
+baseline: null
+updates: []
+resolution: null
+

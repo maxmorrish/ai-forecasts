@@ -1,0 +1,13 @@
+id: valid
+created: 2026-01-01
+claim: A test event will happen before the deadline.
+resolution_criteria: Resolves yes if the official source publishes the result by the deadline.
+resolve_by: 2026-12-31
+probability: 0.4
+category: other
+evidence:
+  - https://example.com/evidence
+baseline: null
+updates: []
+resolution: null
+
