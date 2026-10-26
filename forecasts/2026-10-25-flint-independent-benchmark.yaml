@@ -1,0 +1,16 @@
+id: 2026-10-25-flint-independent-benchmark
+created: '2026-10-26'
+claim: An independent benchmark will publish a score for RecursiveSI's Flint model
+  by 31 January 2027.
+resolution_criteria: Resolves yes if, on or before 2027-01-31, Epoch AI's Benchmarking
+  Hub or Artificial Analysis publishes a benchmark score for the Flint model released
+  by RecursiveSI on Hugging Face (RecursiveSI/flint); scores reported by the developer
+  do not count.
+resolve_by: '2027-01-31'
+probability: 0.55
+category: models
+evidence:
+- https://huggingface.co/RecursiveSI/flint
+baseline: null
+updates: []
+resolution: null
