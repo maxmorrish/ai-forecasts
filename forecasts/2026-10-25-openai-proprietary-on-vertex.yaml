@@ -1,0 +1,16 @@
+id: 2026-10-25-openai-proprietary-on-vertex
+created: '2026-10-26'
+claim: Google Cloud's Vertex AI will list a proprietary OpenAI GPT model as available
+  by 31 January 2027.
+resolution_criteria: Resolves yes if, on or before 2027-01-31, Google Cloud's Vertex
+  AI OpenAI models documentation or a Google Cloud release note lists a non-open-weight
+  OpenAI GPT model as available to customers in preview or general availability; open-weight
+  gpt-oss models do not count.
+resolve_by: '2027-01-31'
+probability: 0.75
+category: business
+evidence:
+- https://openai.com/index/openai-models-google-cloud/
+baseline: null
+updates: []
+resolution: null
