@@ -1,0 +1,16 @@
+id: 2026-11-01-anthropic-game-recreation-statement
+created: '2026-11-01'
+claim: Anthropic will publicly say that Claude limits recreating specific existing
+  games by 31 January 2027.
+resolution_criteria: Resolves yes if a page on an Anthropic-owned domain, or a named
+  Anthropic spokesperson or employee quoted by a news outlet, states by 31 January
+  2027 that Claude or Claude Code declines or limits recreating specific existing
+  games.
+resolve_by: '2027-01-31'
+probability: 0.45
+category: policy
+evidence:
+- https://github.com/anthropics/claude-code/issues/106167
+baseline: null
+updates: []
+resolution: null
