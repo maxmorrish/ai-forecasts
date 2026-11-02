@@ -1,0 +1,13 @@
+id: 2026-11-01-agent-desktop-homebrew
+created: '2026-11-01'
+claim: The agent-desktop CLI will be a homebrew-core formula by 31 December 2026.
+resolution_criteria: Resolves yes if a pull request adding an agent-desktop formula
+  is merged into Homebrew/homebrew-core on or before 31 December 2026.
+resolve_by: '2026-12-31'
+probability: 0.88
+category: tooling
+evidence:
+- https://github.com/Homebrew/homebrew-core/pull/322499
+baseline: null
+updates: []
+resolution: null
