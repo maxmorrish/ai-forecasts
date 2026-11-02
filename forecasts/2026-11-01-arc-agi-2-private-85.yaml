@@ -1,0 +1,19 @@
+id: 2026-11-01-arc-agi-2-private-85
+created: '2026-11-01'
+claim: An ARC-AGI-2 Kaggle entry will score at least 85% on the private evaluation
+  set in ARC Prize 2026.
+resolution_criteria: Resolves yes if ARC Prize's published final results for the ARC-AGI-2
+  track of ARC Prize 2026 show at least one entry scoring 85% or higher on the private
+  evaluation set by 31 December 2026.
+resolve_by: '2026-12-31'
+probability: 0.62
+category: models
+evidence:
+- https://arcprize.org/competitions/2026/arc-agi-2
+baseline:
+  platform: manifold
+  url: https://manifold.markets/LCBOB/will-the-arcagi-grand-prize-be-clai-hguqtn9ddd
+  probability: 0.5473495002346049
+  recorded: '2026-11-01'
+updates: []
+resolution: null
