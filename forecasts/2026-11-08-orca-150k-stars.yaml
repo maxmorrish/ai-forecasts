@@ -1,0 +1,13 @@
+id: 2026-11-08-orca-150k-stars
+created: '2026-11-11'
+claim: stablyai/orca will have at least 150,000 GitHub stars by 31 January 2027.
+resolution_criteria: Resolves yes if the GitHub REST API reports stargazers_count
+  of 150,000 or more for stablyai/orca on or before 31 January 2027.
+resolve_by: '2027-01-31'
+probability: 0.75
+category: open-source
+evidence:
+- https://github.com/stablyai/orca
+baseline: null
+updates: []
+resolution: null
