@@ -1,0 +1,14 @@
+id: 2026-11-08-deepseek-harness-330k-stars
+created: '2026-11-11'
+claim: deepseek-ai/deepseek-harness will have at least 330,000 GitHub stars by 31
+  January 2027.
+resolution_criteria: Resolves yes if the GitHub REST API reports stargazers_count
+  of 330,000 or more for deepseek-ai/deepseek-harness on or before 31 January 2027.
+resolve_by: '2027-01-31'
+probability: 0.65
+category: open-source
+evidence:
+- https://github.com/deepseek-ai/deepseek-harness
+baseline: null
+updates: []
+resolution: null
