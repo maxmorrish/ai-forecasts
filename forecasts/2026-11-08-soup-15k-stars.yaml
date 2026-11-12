@@ -1,0 +1,14 @@
+id: 2026-11-08-soup-15k-stars
+created: '2026-11-11'
+claim: MakazhanAlpamys/Soup will have at least 15,000 GitHub stars by 28 February
+  2027.
+resolution_criteria: Resolves yes if the GitHub REST API reports stargazers_count
+  of 15,000 or more for MakazhanAlpamys/Soup on or before 28 February 2027.
+resolve_by: '2027-02-28'
+probability: 0.6
+category: open-source
+evidence:
+- https://github.com/MakazhanAlpamys/Soup
+baseline: null
+updates: []
+resolution: null
